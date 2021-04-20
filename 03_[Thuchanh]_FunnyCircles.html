@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border: 1px solid red;"></canvas>
+<script>
+    function Circle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+
+    function getRandomColor() {
+        var red = getRandomHex();
+        var blue = getRandomHex();
+        var green = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+
+    function createCircle() {
+        var ctx = document.getElementById('myCanvas').getContext("2d");
+        var radius = Math.floor(Math.random() * 80)
+        var color = getRandomColor()
+        var x = Math.random() * 1368;
+        var y = Math.random() * 768;
+        var circle = new Circle(x, y, radius);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+        console.log(x, y);
+    }
+    function createMultipleCircle(n) {
+        for (let i=0;i<n;i++) {
+            createCircle();
+        }
+    }
+    let number = +prompt("Nhap so luong: ")
+    createMultipleCircle(number);
+
+</script>
+</body>
+</html>
