@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+<body>
+<img src="sportscar.png" id="car" height="50" width="100"/>
+<canvas id="myCanvas" width="1800" height="800"></canvas>
+</body>
+<script>
+    let canvas = document.getElementById('myCanvas');
+    let pen = canvas.getContext("2d");
+    let img = document.getElementById('car');
+    pen.drawImage(img,900,400);
+</script>
+</html>
