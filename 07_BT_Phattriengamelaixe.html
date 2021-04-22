@@ -10,13 +10,15 @@
     }
 </style>
 <body>
-<img src="sportscar.png" id="car" height="50" width="100"/>
+
 <canvas id="myCanvas" width="1800" height="800"></canvas>
 </body>
 <script>
     let canvas = document.getElementById('myCanvas');
     let pen = canvas.getContext("2d");
-    let img = document.getElementById('car');
-    pen.drawImage(img,900,400);
+    let img=new Image();
+    img.src= 'sportscar.png';
+    img.onload=function (){
+    pen.drawImage(img,900,400,100,50);}
 </script>
 </html>
