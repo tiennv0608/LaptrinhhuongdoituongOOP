@@ -9,10 +9,10 @@
     let Temperature = function (celsius) {
         this.celsius = celsius;
         this.changeFarenheit = function () {
-            return celsius * 9/5 + 32;
+            return this.celsius * 9/5 + 32;
         }
         this.changeKenvin = function () {
-            return celsius + 273.15
+            return this.celsius + 273.15
         }
     }
     function showTemperature() {
@@ -20,7 +20,8 @@
         temperature = new Temperature(nhietdo);
         let doF = temperature.changeFarenheit();
         let doK = temperature.changeKenvin();
-        document.write(doF+', '+doK);
+        document.write(nhietdo +' do C = '+ doF+' do F <br>');
+        document.write(nhietdo +' do C = '+ doK+' do K');
     }
     showTemperature();
 </script>
