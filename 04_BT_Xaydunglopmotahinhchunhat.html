@@ -41,9 +41,14 @@
         ctx.fillStyle = color;
         ctx.fillRect(rectangle.x,rectangle.y,rectangle.width,rectangle.height);
     }
+    function showPerimeterAndArea() {
+        var ctx = document.getElementById('myCanvas').getContext("2d");
+        ctx.font = "20px Times New Roman";
+        ctx.fillText("Dien tich hinh chu nhat la: "+rectangle.getArea(),100,100)
+        ctx.fillText("Chu vi hinh chu nhat la: "+rectangle.getPerimeter(),100,120)
+    }
     createRectangle();
-    document.write(rectangle.getPerimeter() + "<br>");
-    document.write(rectangle.getArea());
+    showPerimeterAndArea();
 
 
 </script>
