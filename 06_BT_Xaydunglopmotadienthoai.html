@@ -23,7 +23,7 @@
 <body>
 <div class="mobile" id="iphone">
     <p id="iphone-name">Name</p>
-    <p id="iphone-battery" onchange="turnOffMobile(mobile1)">0</p>
+    <p id="iphone-battery">0</p>
     <textarea id="iphone-inbox" cols="30" rows="10" placeholder="Inbox"></textarea>
     <textarea id="iphone-outbox" cols="30" rows="10" placeholder="Outbox"></textarea>
     <input type="text" id="iphone-msg" oninput="mobile1.writeMessage(this.value)">
@@ -32,7 +32,7 @@
 </div>
 <div class="mobile" id="oppo" style="display: block">
     <p id="oppo-name">Name</p>
-    <p id="oppo-battery" onchange="turnOffMobile(mobile2)">0</p>
+    <p id="oppo-battery">0</p>
     <textarea id="oppo-inbox" cols="30" rows="10" placeholder="Inbox"></textarea>
     <textarea id="oppo-outbox" cols="30" rows="10" placeholder="Outbox"></textarea>
     <input type="text" id="oppo-msg" oninput="mobile2.writeMessage(this.value)">
