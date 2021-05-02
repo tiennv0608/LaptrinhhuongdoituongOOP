@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    let apple = new Apple(3);
+    let human1 = new Human("Adam","Male",70);
+    let human2 = new Human("Eva","Female",45);
+    human1.say("Hello Eva!!!");
+    human2.say("Nice to meet you Adam!!!");
+    human1.say("I have an apple, let's eat together!!");
+    human2.say("That's great!!!");
+    console.log(human1.setGender())
+    console.log(human2.setGender())
+    console.log(apple.getWeight());
+    human1.eat(apple);
+    console.log(human1.weight);
+    console.log(apple.getWeight());
+    human2.eat(apple);
+    console.log(human2.weight);
+    console.log(apple.getWeight());
+    human1.eat(apple);
+    console.log(human1.weight);
+    console.log(apple.getWeight());
+    human2.eat(apple);
+    console.log(human2.weight);
+    console.log(apple.getWeight());
+    human1.eat(apple);
+    console.log(human1.weight);
+    console.log(apple.getWeight());
+</script>
+</html>
